@@ -1,7 +1,10 @@
 class Task < ApplicationRecord
   # バリデーションの設定
-  validates :title, length: { maximum: 20, message: "は20文字以内で入力してください" } 
+  validates :title, presence: { message: "は必須項目です" }, length: { maximum: 20, message: "は20文字以内で入力してください" }
   validates :memo, length: { maximum: 500, message: "は500文字以内で入力してください" }
+  validates :start_date, presence: { message: "は必須項目です" }
+  validates :end_date, presence: { message: "は必須項目です" }
+
   # エラーの定義は{}内で行っているためerrors.addを実装する必要はない
 
   validate :end_date_after_start_date
