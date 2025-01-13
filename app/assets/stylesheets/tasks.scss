@@ -1,0 +1,52 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+table {
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+
+.partial {
+  color: white;
+  background-color: black;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  height: 50px;
+  margin-bottom: 24px;
+}
+
+table th {
+  padding: 10px 20px;
+  border-bottom: 2px solid gray;
+}
+
+table td {
+  padding: 10px 20px;
+}
+
+.notice {
+  padding: 5px;
+}
+
+
+/* .datetimepickerにアイコンが被らないようにするためのスタイル */
+.datetimepicker {
+  position: relative;
+}
+
+.datetimepicker + .fa-calendar {
+  position: absolute;
+  right: 10px;  /* アイコンを右に配置 */
+  top: 50%;     /* 垂直方向の中央に配置 */
+  transform: translateY(-50%); /* アイコンを縦方向に中央揃え */
+  pointer-events: none; /* アイコンをクリックできないように */
+}
+
